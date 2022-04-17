@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAKE EULOGIES FOR FAKE FRIENDS</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="main-container">
+      <button
+        class="button"
+        type="submit"
+        name="completed"
+        value=""
+        onclick="window.location.reload();"
+      >
+        FAKE EULOGIES FOR FAKE FRIENDS
+      </button>
+      <div class="goodbye"><h3>Rest in Peace...</h3></div>
+      <div class="name"></div>
+      <div class="photo-container">
+        <img
+          class="frame"
+          src="https://i.ibb.co/hVk3zHK/wreath.png"
+          alt="Picture Frame"
+        />
+      </div>
+      <div class="eulogy-container">
+        <div class="eulogy"></div>
+        <div id="loading"></div>
+      </div>
+    </div>
+    <script src="https://cdnjs.deepai.org/deepai.min.js"></script>
+    <script src="grained.js"></script>
+    <script src="main.js" type="module"></script>
+  </body>
+</html>

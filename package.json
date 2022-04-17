@@ -1,0 +1,23 @@
+{
+  "name": "eulogy-1",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "parcel client/index.html",
+    "build": "parcel build client/index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "buffer": "^6.0.3",
+    "parcel": "^2.4.1",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "deepai": "^1.0.21",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}

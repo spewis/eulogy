@@ -1,0 +1,138 @@
+* {
+    color: #d3ead4;
+    font-family: 'Work Sans', sans-serif;
+}
+
+body {
+    background-color: #1c5b4d;
+    margin: 0;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: 600;
+    display: inline;
+}
+
+h3 {
+    font-family: 'Beau Rivage', cursive;
+    font-size: 30px;
+    font-weight: 300;
+    display: inline;
+}
+
+h4 {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+#main-container {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* TITLE */
+
+
+.button {
+    width: 600px;
+    border: 4px solid #d3ead4;
+    color: #d3ead4;
+    background: #1c5b4d;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    font-size: 20px;
+    font-family: 'PT Mono', monospace;
+    font-weight: 500;
+    vertical-align: middle;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    cursor: pointer;
+    z-index: 9;
+  }
+  
+  .button:hover {
+  background-color: #d3ead4;
+  color: #1c5b4d !important;
+  cursor: pointer;
+  z-index: 10;
+  }
+
+.goodbye {
+    margin-bottom: 10px;
+}
+
+/* PHOTO */
+
+.photo-container {
+    margin-top: 20px;
+    display: block;
+    width: 600px;
+    height: 700px;
+    overflow: hidden;
+    position: relative;
+    align-items: center;
+}
+
+.frame {
+    height: 700px;
+    width: 600px; 
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.photo {
+    height: auto;
+    width: 420px;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* EULOGY */
+
+.eulogy-container {
+    display: block;
+    width: 900px;
+    min-height: 300px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    text-overflow: ellipsis;
+}
+
+#loading {
+    width: 2rem;
+    height: 2rem;
+    border: 5px solid #d3ead4;
+    border-top: 6px solid #1c5b4d;
+    border-radius: 100%;
+    margin: auto;
+    visibility: hidden;
+    animation: spin 1s infinite linear;
+}
+#loading.display {
+    visibility: visible;
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
