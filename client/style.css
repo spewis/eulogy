@@ -65,7 +65,12 @@ h4 {
   }
 
 .goodbye {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
+}
+
+.name {
+    min-height: 70px;
+    vertical-align: middle;
 }
 
 /* PHOTO */
