@@ -1,3 +1,6 @@
+import "dotenv/config";
+console.log(process.env.API_KEY);
+
 // GRAINED //
 let options = {
   animate: true,
@@ -46,7 +49,7 @@ displayLoading();
 
 // EULOGY REQUEST //
 let deepai = require("deepai");
-deepai.setApiKey("4bafa671-2b3d-4b2a-b9de-bdb9210a9097");
+deepai.setApiKey(process.env.API_KEY);
 
 // EULOGY HANDLING //
 const displayEulogy = document.querySelector(".eulogy");
@@ -108,10 +111,6 @@ function randomGender() {
   }
   return result;
 }
-
-// // FACE REQUEST — RANDOM GENDER //
-// let endpoint =
-//   "https://thingproxy.freeboard.io/fetch/https://fakeface.rest/face/json";
 
 // FACE HANDLING //
 function handleFace(data) {
