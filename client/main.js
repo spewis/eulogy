@@ -100,9 +100,9 @@ function handleName(data) {
 // FACE REQUEST — SPECIFY GENDER //
 function randomGender() {
   let maleUrl =
-    "https://cors-anywhere.herokuapp.com/https://fakeface.rest/face/json?gender=male";
+    "https://cors-proxy.htmldriven.com/?url=https://fakeface.rest/face/json?gender=male";
   let femaleUrl =
-    "https://cors-anywhere.herokuapp.com/https://fakeface.rest/face/json?gender=female";
+    "https://cors-proxy.htmldriven.com/?url=https://fakeface.rest/face/json?gender=female";
   let prob = Math.random(0.5);
   if (prob < 0.5) {
     result = maleUrl;
