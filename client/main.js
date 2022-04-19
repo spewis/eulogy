@@ -125,7 +125,7 @@ function handleFace(data) {
 
 // FACE FETCH //
 fetch(
-  "https://api.allorigins.win/raw/?url=https://fakeface.rest/face/json?gender=male"
+  `https://api.allorigins.win/raw/?url=https://fakeface.rest/face/json?gender=male&random=${Math.random()}`
 )
   .then((r) => r.json())
   .then(handleFace);
