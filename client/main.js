@@ -97,20 +97,20 @@ function handleName(data) {
   eulogyText(fullName);
 }
 
-// FACE REQUEST — SPECIFY GENDER //
-function randomGender() {
-  let maleUrl =
-    "https://thingproxy.freeboard.io/fetch/https://fakeface.rest/face/json?gender=male";
-  let femaleUrl =
-    "https://thingproxy.freeboard.io/fetch/https://fakeface.rest/face/json?gender=female";
-  let prob = Math.random(0.5);
-  if (prob < 0.5) {
-    result = maleUrl;
-  } else {
-    result = femaleUrl;
-  }
-  return result;
-}
+// // FACE REQUEST — SPECIFY GENDER //
+// function randomGender() {
+//   let maleUrl =
+//     "https://thingproxy.freeboard.io/fetch/https://fakeface.rest/face/json?gender=male";
+//   let femaleUrl =
+//     "https://thingproxy.freeboard.io/fetch/https://fakeface.rest/face/json?gender=female";
+//   let prob = Math.random(0.5);
+//   if (prob < 0.5) {
+//     result = maleUrl;
+//   } else {
+//     result = femaleUrl;
+//   }
+//   return result;
+// }
 
 // FACE HANDLING //
 function handleFace(data) {
@@ -124,6 +124,8 @@ function handleFace(data) {
 }
 
 // FACE FETCH //
-fetch(randomGender())
+fetch(
+  "https://api.allorigins.win/raw/?url=https://fakeface.rest/face/json?gender=male"
+)
   .then((r) => r.json())
   .then(handleFace);
