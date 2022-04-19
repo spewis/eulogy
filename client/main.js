@@ -97,18 +97,18 @@ function handleName(data) {
   eulogyText(fullName);
 }
 
-// FACE REQUEST — SPECIFY GENDER //
-function randomGender() {
-  let maleUrl = `https://api.allorigins.win/raw/?url=https://fakeface.rest/face/json?gender=male&random=${Math.random()}`;
-  let femaleUrl = `https://api.allorigins.win/raw/?url=https://fakeface.rest/face/json?gender=female&random=${Math.random()}`;
-  let prob = Math.random(0.5);
-  if (prob < 0.5) {
-    result = maleUrl;
-  } else {
-    result = femaleUrl;
-  }
-  return result;
-}
+// // FACE REQUEST — SPECIFY GENDER //
+// function randomGender() {
+//   let maleUrl = `https://api.allorigins.win/raw/?url=https://fakeface.rest/face/json?gender=male&random=${Math.random()}`;
+//   let femaleUrl = `https://api.allorigins.win/raw/?url=https://fakeface.rest/face/json?gender=female&random=${Math.random()}`;
+//   let prob = Math.random(0.5);
+//   if (prob < 0.5) {
+//     result = maleUrl;
+//   } else {
+//     result = femaleUrl;
+//   }
+//   return result;
+// }
 
 // FACE HANDLING //
 function handleFace(data) {
@@ -122,6 +122,8 @@ function handleFace(data) {
 }
 
 // FACE FETCH //
-fetch(randomGender)
+fetch(
+  `https://api.allorigins.win/raw/?url=https://fakeface.rest/face/json?gender=male&random=${Math.random()}`
+)
   .then((r) => r.json())
   .then(handleFace);
